@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+int plan (int n);
+int plan (int n){
+    int rev =0;
+    int digit;
+    while(n>0){
+        digit = n % 10;
+        rev = rev * 10 + digit;
+        n = n / 10;
+    }
+    return rev;
+}
+
+int main()
+{
+    int n;
+    cout<<"n: ";
+    cin>>n;
+    
+    int num = n;
+    
+    int rev =0;
+    int digit;
+
+    if(num == plan(n)){
+        cout<<"this is plandromic";
+    }
+    else{
+        cout<<"this is not plandromic";
+    }
+}
