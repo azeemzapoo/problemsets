@@ -1,0 +1,31 @@
+#include <iostream>
+
+using namespace std;
+
+void digits(int n);
+void digits(int n){
+    if(n < 0){
+        cout<<"invalid number: ";
+    }
+    
+    int d = 1;
+    while(n/d > 9)
+    {
+        d = d * 10;
+    }
+    
+    while(d > 0){
+        int digit = n/d;
+        cout<<digit<<" ";
+        n = n % d;
+        d = d / 10;
+    }
+}
+
+int main()
+{
+    int n;
+    cout<<"n: ";
+    cin>>n;
+    digits(n);
+}
